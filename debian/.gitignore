@@ -1,0 +1,7 @@
+*.debhelper*
+*.substvars
+backup
+files
+python-tblib
+python3-tblib
+tmp
