@@ -11,14 +11,16 @@ def func_c():
 
 
 def func_d():
-    raise Exception("Guessing time !")
+    raise Exception('Guessing time !')
 
 
 def bad_syntax():
     import badsyntax
-    badsyntax
+
+    badsyntax()
 
 
 def bad_module():
     import badmodule
-    badmodule
+
+    badmodule()

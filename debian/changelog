@@ -1,3 +1,77 @@
+python-tblib (3.0.0-5) unstable; urgency=medium
+
+  * Team Upload.
+  * Remove dependency on python3-six using patch already merged upstream.
+
+  [ Colin Watson ]
+  * Add Salsa CI configuration
+
+ -- Alexandre Detiste <tchet@debian.org>  Wed, 19 Jun 2024 23:21:49 +0200
+
+python-tblib (3.0.0-4) unstable; urgency=medium
+
+  * Use pybuild-plugin-pyproject.
+
+ -- Colin Watson <cjwatson@debian.org>  Sat, 16 Mar 2024 10:30:29 +0000
+
+python-tblib (3.0.0-3) unstable; urgency=medium
+
+  * Export PYTHONNODEBUGRANGES=yes from debian/rules for autopkgtest.
+
+ -- Colin Watson <cjwatson@debian.org>  Wed, 06 Dec 2023 11:16:56 +0000
+
+python-tblib (3.0.0-2) unstable; urgency=medium
+
+  * Run tests with PYTHONNODEBUGRANGES=yes (closes: #1054938).
+
+ -- Colin Watson <cjwatson@debian.org>  Tue, 05 Dec 2023 15:49:27 +0000
+
+python-tblib (3.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Colin Watson <cjwatson@debian.org>  Fri, 27 Oct 2023 13:37:46 +0100
+
+python-tblib (2.0.0-2) unstable; urgency=medium
+
+  * Ignore changes to src/*.egg-info/* when building source package (closes:
+    #1045668).
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 14 Aug 2023 12:00:31 +0100
+
+python-tblib (2.0.0-1) unstable; urgency=medium
+
+  * Update watch file format version to 4.
+  * New upstream release.
+
+ -- Colin Watson <cjwatson@debian.org>  Wed, 28 Jun 2023 23:14:34 +0100
+
+python-tblib (1.7.0-3) unstable; urgency=medium
+
+  * Team upload.
+  * Ignore doctest in Python 3.11 (Closes: #1026731)
+  * Bump policy version (no changes)
+  * Use dh-sequence-python3
+  * Drop unused override_dh_clean
+  * Drop duplicate dependency
+  * Add R³
+  * Enable autopkgtest-pkg-pybuild
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Fri, 30 Dec 2022 14:18:51 +0100
+
+python-tblib (1.7.0-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 12 to 13.
+
+ -- Colin Watson <cjwatson@debian.org>  Sat, 08 Jan 2022 16:35:03 +0000
+
 python-tblib (1.7.0-1) unstable; urgency=medium
 
   [ Debian Janitor ]

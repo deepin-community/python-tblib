@@ -2,6 +2,21 @@
 Changelog
 =========
 
+3.0.0 (2023-10-22)
+~~~~~~~~~~~~~~~~~~
+
+* Added support for  ``__context__``, ``__suppress_context__`` and ``__notes__``.
+  Contributed by Tim Maxwell in `#72 <https://github.com/ionelmc/python-tblib/pull/72>`_.
+* Added the ``get_locals`` argument to ``tblib.pickling_support.install()``, ``tblib.Traceback`` and ``tblib.Frame``.
+  Fixes `#41 <https://github.com/ionelmc/python-tblib/issues/41>`_.
+* Dropped support for now-EOL Python 3.7 and added 3.12 in the test grid.
+
+2.0.0 (2023-06-22)
+~~~~~~~~~~~~~~~~~~
+
+* Removed support for legacy Pythons (2.7 and 3.6) and added Python 3.11 in the test grid.
+* Some cleanups and refactors (mostly from ruff).
+
 1.7.0 (2020-07-24)
 ~~~~~~~~~~~~~~~~~~
 
@@ -36,7 +51,7 @@ Changelog
 
 * Add support for PyPy3.5-5.7.1-beta. Previously ``AttributeError:
   'Frame' object has no attribute 'clear'``  could be raised. See PyPy
-  issue `#2532 <https://bitbucket.org/pypy/pypy/issues/2532/pypy3-attributeerror-frame-object-has-no>`_.
+  issue `#2532 <https://foss.heptapod.net/pypy/pypy/-/issues/2532>`_.
 
 1.3.1 (2017-03-27)
 ~~~~~~~~~~~~~~~~~~
