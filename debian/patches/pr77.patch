@@ -1,0 +1,31 @@
+From 24ef7821707ca030e7e3d4fcc79a9298df861457 Mon Sep 17 00:00:00 2001
+From: Alexandre Detiste <alexandre.detiste@gmail.com>
+Date: Wed, 1 May 2024 13:43:53 +0200
+Subject: [PATCH] vendore reraise() from six
+
+--- a/src/tblib/decorators.py
++++ b/src/tblib/decorators.py
+@@ -1,11 +1,21 @@
+ import sys
+ from functools import wraps
+ 
+-from six import reraise
+-
+ from . import Traceback
+ 
+ 
++def reraise(tp, value, tb=None):
++    try:
++        if value is None:
++            value = tp()
++        if value.__traceback__ is not tb:
++            raise value.with_traceback(tb)
++        raise value
++    finally:
++        value = None
++        tb = None
++
++
+ class Error:
+     def __init__(self, exc_type, exc_value, traceback):
+         self.exc_type = exc_type

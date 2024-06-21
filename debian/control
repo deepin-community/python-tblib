@@ -1,18 +1,30 @@
 Source: python-tblib
 Section: python
 Priority: optional
-Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
-Uploaders: Colin Watson <cjwatson@debian.org>
-Standards-Version: 3.9.8
-Build-Depends: debhelper-compat (= 12), dh-python, python3 (>= 3.1.2-8~), python3-all, python3-setuptools, python3-six, python3-pytest, python3-twisted
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders:
+ Colin Watson <cjwatson@debian.org>,
+Standards-Version: 4.6.2
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-sequence-python3,
+ pybuild-plugin-pyproject,
+ python3-all,
+ python3-pytest <!nocheck>,
+ python3-setuptools,
+ python3-twisted <!nocheck>,
 Homepage: https://github.com/ionelmc/python-tblib
-Vcs-Git: https://salsa.debian.org/python-team/modules/python-tblib.git
-Vcs-Browser: https://salsa.debian.org/python-team/modules/python-tblib
+Vcs-Git: https://salsa.debian.org/python-team/packages/python-tblib.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/python-tblib
+Rules-Requires-Root: no
+Testsuite: autopkgtest-pkg-pybuild
 
 Package: python3-tblib
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends}, ${python3:Depends}, python3-six
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
 Description: Python 3 traceback fiddling library
  This library allows pickling tracebacks so that they can be passed across
  process boundaries.  The traceback objects that come out are stripped of
